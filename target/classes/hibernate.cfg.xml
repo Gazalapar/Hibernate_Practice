@@ -14,8 +14,14 @@
       <property name="current_session_context_class">thread</property>
       <property name="show_sql">true</property>
       <property name="format_sql">true</property>
-      <property name="hbm2ddl.auto">update</property>
+      <property name="hbm2ddl.auto">create</property>
       <mapping class="com.hibernate_practice.Student"/>
       <mapping class="com.hibernate_practice.Address"/>
+      <mapping  class="com.onetoone_mapping.Question"/>
+      <mapping  class="com.onetoone_mapping.Answer"/>
+      <mapping  class="com.onetomany_mapping.QuestionOneToMany"/> 
+      <mapping  class="com.onetomany_mapping.AnswerManyToOne"/>
+        
+      
   </session-factory>
 </hibernate-configuration>

@@ -1,6 +1,7 @@
 package com.hibernate_practice;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -19,6 +20,21 @@ public class Student {
 	private String city;
 	@Transient
 	private String Address;
+	@Embedded
+	private Certificate certi;
+	
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
+	public Certificate getCerti() {
+		return certi;
+	}
+	public void setCerti(Certificate certi) {
+		this.certi = certi;
+	}
 	public int getId() {
 		return id;
 	}
@@ -42,14 +58,18 @@ public class Student {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Student(int id, String name, String city) {
+	
+	public Student(int id, String name, String city, String address, Certificate certi) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.city = city;
+		Address = address;
+		this.certi = certi;
 	}
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", city=" + city + "]";
+		return "Student [id=" + id + ", name=" + name + ", city=" + city + ", Address=" + Address + ", certi=" + certi
+				+ "]";
 	}
 }
