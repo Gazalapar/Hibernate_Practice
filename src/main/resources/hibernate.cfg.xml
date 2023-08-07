@@ -21,6 +21,8 @@
       <mapping  class="com.onetoone_mapping.Answer"/>
       <mapping  class="com.onetomany_mapping.QuestionOneToMany"/> 
       <mapping  class="com.onetomany_mapping.AnswerManyToOne"/>
+      <mapping  class="com.manytomany_mapping.Employee"/> 
+      <mapping  class="com.manytomany_mapping.Project"/>
         
       
   </session-factory>
